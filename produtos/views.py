@@ -25,3 +25,12 @@ def product_update(request, id):
         form.save()
         return redirect('product_list')
     return render(request, 'new_product.html', {'form': form})
+
+
+def product_delete(request, id):
+    product = get_object_or_404(Product, pk=id)
+
+    if request.method == 'POST':
+        product.delete()
+        return redirect('product_list')
+    return render(request, 'product_delete_confirm.html', {'product': product})
