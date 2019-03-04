@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerenciamento do Produto</title>
+</head>
+<body>
+<h2>Gerenciamento do Produto</h2>
+    <a href="{% url 'product_list' %}">Voltar</a><br><br>
+    <h5>Lista de Produtos</h5>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Salvar</button>
+    </form>
+
+</body>
+</html>
