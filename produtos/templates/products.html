@@ -27,7 +27,7 @@
                     <td scope="row">{{ product.product_title }}</td>
                     <td scope="row">{{ product.product_price }}</td>
                     <td scope="row">
-                        <a href="">Alterar</a> /
+                        <a href="{% url 'product_update' product.id %}">Alterar</a> /
                         <a href="">Deletar</a>
                     </td>
                 </tr>
